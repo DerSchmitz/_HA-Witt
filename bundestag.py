@@ -34,7 +34,6 @@ with codecs.open(filename, 'r', encoding='utf-8') as fbt:
         #parse second Name
         nachname = re.sub(",.*", "",ersatzLine)
         nachname = re.sub(" ", "",nachname)
-        nachname = re.sub("\?", "",nachname)
 
         # parse first name
         vorname = re.sub(".*, ", "",ersatzLine)
@@ -48,6 +47,6 @@ with codecs.open(filename, 'r', encoding='utf-8') as fbt:
         finalLine =   re.sub(".\n", " * "+emailAdress , line);
 
         # Print Line
-        print(nachname)
+        print(finalLine)
 
 fbt.close();
